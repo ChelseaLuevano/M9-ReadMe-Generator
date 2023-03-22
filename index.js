@@ -37,6 +37,16 @@ const questions = inquirer
         },
         {
             type: 'input',
+            message: 'Please list any collaborators on this project. Otherwise type "Not Applicable" ',
+            name: 'credits',
+        },
+        {
+            type: 'input',
+            message: 'Please list how to use any tests you have written for this project. If no tests written, type "Not Applicable" ',
+            name: 'tests',
+        },
+        {
+            type: 'input',
             message: 'What is your github user name?',
             name: 'username',
         },
@@ -56,6 +66,7 @@ const questions = inquirer
 
 
 // Questions - Github User Name with link to profile & Email address
+// https://github.com/${username}
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
