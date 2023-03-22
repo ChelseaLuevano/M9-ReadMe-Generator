@@ -2,6 +2,8 @@
 
 const inquirer = require('inquirer');
 
+
+
 // TODO: Create an array of questions for user input
 const questions = inquirer
     .prompt([
@@ -32,7 +34,7 @@ const questions = inquirer
         },
         {
             type: 'input',
-            message: 'What license do you want to use for this project?',
+            message: 'Please share the license link you want to use for this project?',
             name: 'license',
         },
         {
@@ -55,8 +57,9 @@ const questions = inquirer
             message: 'What is your email address?',
             name: 'email-address',
         },
-    ]) .then((response) =>{
-        console.log(response);
+    ]) .then((answer) =>{
+        console.log(answer);
+        // license 
       });
 
 // the title of my project and sections entitled Description, Table of Contents, Installation, Usage, 
@@ -69,7 +72,15 @@ const questions = inquirer
 // https://github.com/${username}
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+
+
+const writeToFile = function (fileName, data) {
+
+
+}
+
 
 // TODO: Create a function to initialize app
 function init() {}
