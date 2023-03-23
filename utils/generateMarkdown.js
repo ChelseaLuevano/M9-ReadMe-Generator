@@ -33,18 +33,36 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Credits](#credits)
+    - [License](#license)
 
   ## Installation
   ${data.installation}
   
   ## Usage
+  ${data.usage}
+
+  ## Credits
+  ${data.credits}
 
   ## License 
 
-  ## Credits
+
+  ## Badges 
+
+  ## Tests
+
+  ${data.tests}
+
+
 
   ##Questions
+  Github User Name: ${data.username}
+  Github Profile: https://github.com/${data.username}
+
+  If you have any questions about my Github Project, please send an email to ${data.email-address} .
 `;
 }
 

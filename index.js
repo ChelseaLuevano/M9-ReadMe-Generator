@@ -20,7 +20,7 @@ const questions = inquirer
         // },
         // {
         //     type: 'input',
-        //     message: 'What are your installation instructions?',
+        //     message: 'What are the steps required to install your project?',
         //     name: 'installation',
         // },
         // {
