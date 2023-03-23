@@ -12,54 +12,56 @@ const questions = inquirer
             message: 'What is your project title?',
             name: 'title',
         },
-        {
-            type: 'input',
-            message: 'What is your project description?',
-            name: 'description',
-        },
-        {
-            type: 'input',
-            message: 'What are your installation instructions?',
-            name: 'installation',
-        },
-        {
-            type: 'input',
-            message: 'How can someone use your project code?',
-            name: 'usage',
-        },
-        {
-            type: 'input',
-            message: 'How can someone use your project code?',
-            name: 'usage',
-        },
+        // {
+        //     type: 'input',
+        //     message: 'What is your project description?',
+        //     name: 'description',
+        // },
+        // {
+        //     type: 'input',
+        //     message: 'What are your installation instructions?',
+        //     name: 'installation',
+        // },
+        // {
+        //     type: 'input',
+        //     message: 'How can someone use your project code?',
+        //     name: 'usage',
+        // },
+        // {
+        //     type: 'input',
+        //     message: 'How can someone use your project code?',
+        //     name: 'usage',
+        // },
         {
             type: 'input',
             message: 'Please share the license link you want to use for this project?',
             name: 'license',
         },
-        {
-            type: 'input',
-            message: 'Please list any collaborators on this project. Otherwise type "Not Applicable" ',
-            name: 'credits',
-        },
-        {
-            type: 'input',
-            message: 'Please list how to use any tests you have written for this project. If no tests written, type "Not Applicable" ',
-            name: 'tests',
-        },
-        {
-            type: 'input',
-            message: 'What is your github user name?',
-            name: 'username',
-        },
-        {
-            type: 'input',
-            message: 'What is your email address?',
-            name: 'email-address',
-        },
+        // {
+        //     type: 'input',
+        //     message: 'Please list any collaborators on this project. Otherwise type "Not Applicable" ',
+        //     name: 'credits',
+        // },
+        // {
+        //     type: 'input',
+        //     message: 'Please list how to use any tests you have written for this project. If no tests written, type "Not Applicable" ',
+        //     name: 'tests',
+        // },
+        // {
+        //     type: 'input',
+        //     message: 'What is your github user name?',
+        //     name: 'username',
+        // },
+        // {
+        //     type: 'input',
+        //     message: 'What is your email address?',
+        //     name: 'email-address',
+        // },
     ]) .then((answer) =>{
-        console.log(answer);
-        // license 
+       generateMarkdown(answer.license);
+        // renderLicenseLink(answer.license);
+        // renderLicenseSection(answer.license);
+        writeToFile(answer);
       });
 
 // the title of my project and sections entitled Description, Table of Contents, Installation, Usage, 
@@ -69,7 +71,7 @@ const questions = inquirer
 
 
 // Questions - Github User Name with link to profile & Email address
-// https://github.com/${username}
+// `https://github.com/${username}`
 
 // TODO: Create a function to write README file
 const fs = require('fs');
@@ -77,7 +79,7 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
 const writeToFile = function (fileName, data) {
-
+// fs.appendFile(`${title}.md`, )
 
 }
 
