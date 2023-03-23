@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application - I installed inquirer version 8.2.4
 
 const inquirer = require('inquirer');
-
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
 // TODO: Create an array of questions for user input
@@ -24,12 +25,12 @@ const questions = inquirer
         // },
         // {
         //     type: 'input',
-        //     message: 'How can someone use your project code?',
+        //     message: 'Provide instructions for use.',
         //     name: 'usage',
         // },
         // {
         //     type: 'input',
-        //     message: 'How can someone use your project code?',
+        //     message: 'use your project code?',
         //     name: 'usage',
         // },
         {
@@ -57,11 +58,9 @@ const questions = inquirer
         //     message: 'What is your email address?',
         //     name: 'email-address',
         // },
-    ]) .then((answer) =>{
-       generateMarkdown(answer.license);
-        // renderLicenseLink(answer.license);
-        // renderLicenseSection(answer.license);
-        writeToFile(answer);
+    ]) .then((data) =>{
+      const fileContent = generateMarkdown(data);
+        writeToFile(data);
       });
 
 // the title of my project and sections entitled Description, Table of Contents, Installation, Usage, 
@@ -74,12 +73,11 @@ const questions = inquirer
 // `https://github.com/${username}`
 
 // TODO: Create a function to write README file
-const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+
 
 
 const writeToFile = function (fileName, data) {
-// fs.appendFile(`${title}.md`, )
+// fs.writeFile(`${title}.md`, )
 
 }
 

@@ -7,7 +7,10 @@ const index = require('../index.js')
 
 
 function renderLicenseBadge(license) {
-  console.log(index.license)
+  if (license !== 'None') {
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  }
+  return '';
 }
 // do i need to do a module export for each of these functions so I can call this in my write file function?
 
@@ -24,7 +27,24 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  
+  
+  ## Description
+  ${data.description}
 
+  ## Table of Contents
+  
+
+  ## Installation
+  ${data.installation}
+  
+  ## Usage
+
+  ## License 
+
+  ## Credits
+
+  ##Questions
 `;
 }
 
