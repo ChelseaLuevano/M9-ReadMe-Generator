@@ -28,49 +28,36 @@ const questions = inquirer
         //     message: 'Provide instructions for use.',
         //     name: 'usage',
         // },
-        // {
-        //     type: 'input',
-        //     message: 'use your project code?',
-        //     name: 'usage',
-        // },
         {
             type: 'input',
-            message: 'Please share the license link you want to use for this project?',
+            message: 'Please share the license for this project?',
             name: 'license',
         },
-        // {
-        //     type: 'input',
-        //     message: 'Please list any collaborators on this project. Otherwise type "Not Applicable" ',
-        //     name: 'credits',
-        // },
-        // {
-        //     type: 'input',
-        //     message: 'Please list how to use any tests you have written for this project. If no tests written, type "Not Applicable" ',
-        //     name: 'tests',
-        // },
-        // {
-        //     type: 'input',
-        //     message: 'What is your github user name?',
-        //     name: 'username',
-        // },
-        // {
-        //     type: 'input',
-        //     message: 'What is your email address?',
-        //     name: 'email-address',
-        // },
+        {
+            type: 'input',
+            message: 'Please list any collaborators on this project. Otherwise type "Not Applicable" ',
+            name: 'credits',
+        },
+        {
+            type: 'input',
+            message: 'Please list how to use any tests you have written for this project. If no tests written, type "Not Applicable" ',
+            name: 'tests',
+        },
+        {
+            type: 'input',
+            message: 'What is your github user name?',
+            name: 'username',
+        },
+        {
+            type: 'input',
+            message: 'What is your email address?',
+            name: 'email',
+        },
     ]) .then((data) =>{
       const fileContent = generateMarkdown(data);
         writeToFile(data);
       });
 
-// the title of my project and sections entitled Description, Table of Contents, Installation, Usage, 
-
-// License -Type List of license options
-// , Contributing, Tests, and 
-
-
-// Questions - Github User Name with link to profile & Email address
-// `https://github.com/${username}`
 
 // TODO: Create a function to write README file
 

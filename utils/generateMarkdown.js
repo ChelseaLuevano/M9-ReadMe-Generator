@@ -37,6 +37,9 @@ function generateMarkdown(data) {
     - [Usage](#usage)
     - [Credits](#credits)
     - [License](#license)
+    - [Badges] (#badges)
+    - [Tests] (#tests)
+    - [Questions] (#questions)
 
   ## Installation
   ${data.installation}
@@ -48,7 +51,7 @@ function generateMarkdown(data) {
   ${data.credits}
 
   ## License 
-
+  ${data.license}
 
   ## Badges 
 
@@ -57,12 +60,11 @@ function generateMarkdown(data) {
   ${data.tests}
 
 
-
   ##Questions
   Github User Name: ${data.username}
   Github Profile: https://github.com/${data.username}
 
-  If you have any questions about my Github Project, please send an email to ${data.email-address} .
+  If you have any questions about my Github Project, please send an email to ${data.email} .
 `;
 }
 
