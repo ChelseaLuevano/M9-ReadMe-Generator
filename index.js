@@ -60,15 +60,15 @@ const questions = inquirer
 
 
 // TODO: Create a function to write README file
-
-
-
 const writeToFile = function (fileName, data) {
-// fs.writeFile(`${title}.md`, )
+fs.writeFile('README1.md', data, err => {
+    if (err) {
+        return console.log (err);
+        }
+        console.log("The file has been written!")  
+    });
 
 }
-
-
 // TODO: Create a function to initialize app
 function init() {}
 
