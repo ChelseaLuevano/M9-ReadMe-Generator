@@ -3,7 +3,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-
+const fileName = 'README1.md';
 
 // TODO: Create an array of questions for user input
 const questions = inquirer
@@ -12,6 +12,7 @@ const questions = inquirer
             type: 'input',
             message: 'What is your project title?',
             name: 'title',
+            validate: (value) =>{ if (value){return true} else {return "Please enter a title to continue."}},
         },
         // {
         //     type: 'input',
@@ -54,14 +55,15 @@ const questions = inquirer
             name: 'email',
         },
     ]) .then((data) =>{
-      const fileContent = generateMarkdown(data);
+        const fileContent = generateMarkdown(data);
         writeToFile(data);
+       
       });
 
 
 // TODO: Create a function to write README file
-const writeToFile = function (fileName, data) {
-fs.writeFile('README1.md', data, err => {
+const writeToFile = function (data) {
+fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) => {
     if (err) {
         return console.log (err);
         }
@@ -74,3 +76,5 @@ function init() {}
 
 // Function call to initialize app
 init();
+
+module.exports = writeToFile;

@@ -4,9 +4,7 @@ const index = require('../index.js')
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 
-
-
-function renderLicenseBadge(license) {
+let badge = function renderLicenseBadge(license) {
   if (license !== 'None') {
     return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
   }
@@ -27,7 +25,6 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  
   
   ## Description
   ${data.description}
@@ -54,7 +51,8 @@ function generateMarkdown(data) {
   ${data.license}
 
   ## Badges 
-
+  ${badge} 
+  
   ## Tests
 
   ${data.tests}
