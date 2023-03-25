@@ -6,7 +6,7 @@ const index = require('../index.js')
 
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    return `[![GitHub license}](https://img.shields.io/badge/license-${license}-blue.svg)](https://opensource.org/licences/${license})`;
+    return `![GitHub license}](https://img.shields.io/badge/license-${license}-blue.svg)(https://opensource.org/licences/${license})`;
   }
   return '';
 }
@@ -35,13 +35,12 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
-    - [Badges] (#badges)
-    - [Tests] (#tests)
-    - [Questions] (#questions)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Installation
   ${data.installation}
