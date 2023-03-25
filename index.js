@@ -17,16 +17,19 @@ const questions = [
         type: 'input',
         message: 'What is your project description?',
         name: 'description',
+        validate: (value) => { if (value) { return true } else { return "Please enter a project description to continue." }},
     },
     {
         type: 'input',
         message: 'What are the steps required to install your project?',
         name: 'installation',
+        validate: (value) => { if (value) { return true } else { return "Please enter installation instructions to continue." }},
     },
     {
         type: 'input',
         message: 'Please provide instructions for use.',
         name: 'usage',
+        validate: (value) => { if (value) { return true } else { return "Please enter usage instructions to continue." }},
     },
     {
         type: "list",
@@ -44,23 +47,25 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Please list any collaborators on this project. Otherwise type "Not Applicable" ',
+        message: 'Please list any collaborators on this project. Otherwise type "Not Applicable" or hit enter. ',
         name: 'credits',
     },
     {
         type: 'input',
-        message: 'Please list how to use any tests you have written for this project. If no tests written, type "Not Applicable" ',
+        message: 'Please list how to use any tests you have written for this project. If no tests written, type "Not Applicable" or hit enter. ',
         name: 'tests',
     },
     {
         type: 'input',
-        message: 'What is your github user name?',
+        message: 'What is your GitHub user name?',
         name: 'username',
+        validate: (value) => { if (value) { return true } else { return "Please enter a GitHub Username to continue." }},
     },
     {
         type: 'input',
         message: 'What is your email address?',
         name: 'email',
+        validate: (value) => { if (value) { return true } else { return "Please enter an email address to continue." }},
     },
 ]
 

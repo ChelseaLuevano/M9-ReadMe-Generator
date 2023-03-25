@@ -1,7 +1,7 @@
-# houses
+# title
   
   ## Description
-  site about houses
+  description of project
 
   ## Table of Contents
     - [Installation](#installation)
@@ -13,20 +13,20 @@
     - [Questions] (#questions)
 
   ## Installation
-  house 
+  installation stuff
   
   ## Usage
-  clear
+  instruction stuff
 
   ## Credits
   
 
   ## License 
-  Apache
+  GNU
 
   
-    [![GitHub license](https://img.shields.io/badge/license-Apache-blue.svg)](https://opensource.org/licences/Apache)
-    https://img.shields.io/badge/license-Apache-blue.svg)
+    [![GitHub license}](https://img.shields.io/badge/license-GNU-blue.svg)](https://opensource.org/licences/GNU)
+    https://img.shields.io/badge/license-GNU-blue.svg)
   
 
   ## Tests
@@ -35,7 +35,7 @@
 
 
   ## Questions
-  Github User Name: 
-  Github Profile: https://github.com/
+  Github User Name: github names are cool
+  Github Profile: https://github.com/github names are cool
 
-  If you have any questions about my Github Project, please send an email to  .
+  If you have any questions about my Github Project, please send an email to google@gmail.com .
