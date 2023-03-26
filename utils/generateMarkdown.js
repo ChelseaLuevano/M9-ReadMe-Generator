@@ -5,7 +5,7 @@ const index = require('../index.js')
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    return `[![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)]`;
   }
   return '';
 }
