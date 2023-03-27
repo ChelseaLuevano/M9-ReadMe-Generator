@@ -13,7 +13,19 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  return `https://img.shields.io/badge/license-${license}-blue.svg)`
+
+  if (`${license} = Apache`) {
+    return `https://opensource.org/licenses/Apache-2.0`
+   }
+   else if (`${license} = GNU`) 
+   {
+    return `https://www.gnu.org/licenses/gpl-3.0`
+   }
+   else if (`${license} = ISC`) 
+   {
+    return `https://opensource.org/licenses/ISC`
+   }
+  
 }
 
 // TODO: Create a function that returns the license section of README
