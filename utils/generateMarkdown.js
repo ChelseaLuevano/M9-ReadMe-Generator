@@ -17,6 +17,10 @@ function renderLicenseLink(license) {
   if (`${license} = Apache`) {
     return `https://opensource.org/licenses/Apache-2.0`
    }
+   else if (`${license} = Boost`) 
+   {
+    return `https://www.boost.org/LICENSE_1_0.txt`
+   }
    else if (`${license} = GNU`) 
    {
     return `https://www.gnu.org/licenses/gpl-3.0`
@@ -25,7 +29,26 @@ function renderLicenseLink(license) {
    {
     return `https://opensource.org/licenses/ISC`
    }
-  
+   else if (`${license} = MIT`) 
+   {
+    return `https://opensource.org/licenses/MIT`
+   }
+   else if (`${license} = Mozilla`)
+   {
+    return 'https://opensource.org/licenses/MPL-2.0'
+   } 
+   else if (`${license} = Unlicense`)
+   {
+    return 'http://unlicense.org/'
+   } 
+   else if (`${license} = License Not Listed`)
+   {
+    return 'License Not Listed'
+   }
+   else
+   {
+    return 'No license'
+   }
 }
 
 // TODO: Create a function that returns the license section of README

@@ -37,12 +37,14 @@ const questions = [
         name: "license",
         choices: [
             "Apache",
-            "Academic",
+            "Boost",
             "GNU",
             "ISC",
             "MIT",
             "Mozilla",
-            "Open"
+            "Unlicense",
+            "None", 
+            "License Not Listed"
         ]
     },
     {
