@@ -1,11 +1,11 @@
-// TODO: Include packages needed for this application - I installed inquirer version 8.2.4
+// I installed inquirer version 8.2.4
 
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const fileName = 'README1.md';
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -72,7 +72,7 @@ const questions = [
 ]
 
 
-// TODO: Create a function to write README file
+// Function to write README file
 const writeToFile = function (data) {
     fs.writeFile(fileName, data, (err) => {
         if (err) {
@@ -82,7 +82,7 @@ const writeToFile = function (data) {
     });
 
 }
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer.prompt(questions)
         .then(answers => {
